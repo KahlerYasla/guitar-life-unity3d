@@ -19,6 +19,9 @@ public class CharacterController2D : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
+        // Normalize the inputs
+        //inputNormalize(ref moveX, ref moveY);
+
         // Get the running input
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
@@ -36,20 +39,42 @@ public class CharacterController2D : MonoBehaviour
         anim.SetFloat("moveX", moveX);
         anim.SetFloat("moveY", moveY);
 
-        if ((Mathf.Abs(moveX) + Mathf.Abs(moveY)) != 0 && !isRunning)
-        {
-            anim.SetBool("isWalking", true);
-        }
-        else if ((Mathf.Abs(moveX) + Mathf.Abs(moveY)) != 0 && isRunning)
-        {
-            anim.SetBool("isRunning", true);
-            anim.SetBool("isWalking", false);
-        }
-        else
+        if (Mathf.Abs(moveX) < 0.1f && Mathf.Abs(moveY) < 0.1f)
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isRunning", false);
         }
+        else
+        {
+            if (!isRunning)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            else
+            {
+                anim.SetBool("isRunning", true);
+                anim.SetBool("isWalking", false);
+            }
+        }
     }
+
+    /*
+        void inputNormalize(ref float moveX, ref float moveY)
+        {
+            if (moveX == 1)
+                moveX = 1;
+            else if (moveX == -1)
+                moveX = -1;
+            else
+                moveX = 0;
+
+            if (moveY == 1)
+                moveY = 1;
+            else if (moveY == -1)
+                moveY = -1;
+            else
+                moveY = 0;
+        }
+    */
 
 }
