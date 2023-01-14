@@ -106,25 +106,25 @@ public class CarManager : MonoBehaviour
                 // set the down road cars' sorting order bigger than player
                 if (car.name[3] == 'D')
                 {
-                    car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder + 1;
+                    car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder + 3;
                 }
                 // set the up road cars' sorting order smaller than player
                 else
                 {
-                    car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder - 1;
+                    car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder - 3;
                 }
             }
             // check if player is above all cars
             else if (player.transform.position.y > -1.5f)
             {
                 // set the all cars' sorting order
-                car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder + 1;
+                car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder + 3;
             }
             // check if player is below all cars
             else if (player.transform.position.y < -3.5f)
             {
                 // set the all cars' sorting order
-                car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder - 1;
+                car.GetComponent<SpriteRenderer>().sortingOrder = player.GetComponent<SpriteRenderer>().sortingOrder - 3;
             }
             node = node.Next;
         }

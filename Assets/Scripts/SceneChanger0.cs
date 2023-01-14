@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger0 : MonoBehaviour
 {
+    // Controls All Scene Changes
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name.Contains("Door"))
         {
-            print("Door");
             switch (other.gameObject.name)
             {
                 case "BarDoor":
