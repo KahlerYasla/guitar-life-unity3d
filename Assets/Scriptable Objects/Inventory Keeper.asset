@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61166d8d213a46943b2ae2373c75ab07, type: 3}
+  m_Name: Inventory Keeper
+  m_EditorClassIdentifier: 
+  spritesOfSlots:
+  - {fileID: 21300000, guid: ae723b1d584f485419d79c9e88cb9960, type: 3}
+  - {fileID: 6407941872125734460, guid: cab9c4fc5087f1f40a9e62b90e23c1cd, type: 3}
+  - {fileID: -302238117444555354, guid: c4852a23d69558c4cbe3c37ef5c21782, type: 3}
+  - {fileID: 1981607284842267656, guid: e8b013d2c050e9d4f82a136b5d5cd35e, type: 3}
+  - {fileID: 4015490458109735407, guid: e8b013d2c050e9d4f82a136b5d5cd35e, type: 3}
+  - {fileID: 6600429180033243848, guid: 384fa3c507b45004c8619408d97f70b2, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

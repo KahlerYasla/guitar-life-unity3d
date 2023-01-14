@@ -10389,6 +10389,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a9fc7633347034a85af67086c107e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSlots:
+  - {fileID: 2050190657}
+  - {fileID: 1285534554}
+  - {fileID: 1102409736}
+  - {fileID: 1419746134}
+  - {fileID: 288683477}
+  - {fileID: 348339352}
+  - {fileID: 1804588547}
+  - {fileID: 1019161143}
+  - {fileID: 1145205935}
+  inventoryObj: {fileID: 11400000, guid: c5883f51d582f5d459ed2f02e724e4af, type: 2}
 --- !u!95 &1645491534
 Animator:
   serializedVersion: 4
